@@ -14,11 +14,11 @@ steps:
   inputs:
     versionType: 'AutoVersion'
     projectJsonPath: '$(Build.SourcesDirectory)'
-    orchestratorConnection: 'teddy-orcehstrator'
+    orchestratorConnection: 'TestSuiteDemoConnection'
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
 - task: UiPathDeploy@2
   inputs:
-    orchestratorConnection: 'teddy-orcehstrator'
+    orchestratorConnection: 'TestSuiteDemoConnection'
     packagesPath: '$(Build.ArtifactStagingDirectory)\Output'
-    folderName: 'mmunir'
-    environments: 'test'
+    folderName: 'test'
+#    environments: 'test'
