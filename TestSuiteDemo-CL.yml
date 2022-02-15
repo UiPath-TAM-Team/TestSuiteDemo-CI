@@ -14,11 +14,11 @@ steps:
   inputs:
     versionType: 'AutoVersion'
     projectJsonPath: '$(Build.SourcesDirectory)'
-    orchestratorConnection: 'TestSuiteDemoConnection'
+    orchestratorConnection: 'TestSuiteDemo'
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
 - task: UiPathDeploy@2
   inputs:
-    orchestratorConnection: 'TestSuiteDemoConnection'
+    orchestratorConnection: 'TestSuiteDemo'
     packagesPath: '$(Build.ArtifactStagingDirectory)\Output'
     folderName: 'test'
 #    environments: 'test'
